@@ -25,7 +25,6 @@
     - [ls](#ls-1)
     - [cat file1 >> file](#cat-file1--file)
 - [压缩、解压](#压缩、解压)
-    - [file 文件名](#file-文件名)
     - [tar](#tar)
     - [unzip a.zip](#unzip-azip)
     - [zip -r c.zip ./a/**](#zip--r-czip-a)
@@ -98,7 +97,7 @@ List的缩写，用于列出目录下的文件，语法：`ls 选项 目录或�
 
 <a id="echo"></a>
 ## echo 
-echo "linux" >> hello.txt**：输出到文件
+**echo "linux" >> hello.txt**：输出到文件
 
 <a id="rm"></a>
 ## rm
@@ -188,9 +187,6 @@ locate a.txt 在系统全局范围内查找文件名包含a.txt字样的文件�
 
 <a id="压缩、解压"></a>
 # 压缩、解压
-<a id="file-文件名"></a>
-## file 文件名
-查文件类型（可看是用哪一种方式压缩的）
 
 <a id="tar"></a>
 ## tar
