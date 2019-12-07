@@ -72,8 +72,8 @@ List的缩写，用于列出目录下的文件，语法：`ls 选项 目录或�
 ## du
 用于查看使用空间，语法：`du 选项 目录或文件名（可多个）`
 > **du -s dir1**： 显示dir1所有文件所占空间总和  
-> **du -h dir1**：方便阅读的格式显示（有单位K，M等）
-> **du -h  --max-depth=1**： 输出当前目录下各个子目录所使用的空间
+> **du -h dir1**：方便阅读的格式显示（有单位K，M等）  
+> **du -h --max-depth=1**： 输出当前目录下各个子目录所使用的空间
 
 
 <a id="file"></a>
@@ -146,14 +146,14 @@ locate a.txt 在系统全局范围内查找文件名包含a.txt字样的文件�
 在目录结构中搜索文件，并执行指定的操作，`语法：find path -option`
 > **find /home -mtime -2**：在/home下查最近2\*24小时内改动过的文件  
 > **find . -size +100M**：在当前目录及子目录下查找大于100M的文件  
-> **find . -mtime +2 -exec rm {} ;**：查出更改时间在2\*24小时以前的文件并删除它
+> **find . -mtime +2 -exec rm {} ;**：查出更改时间在2\*24小时以前的文件并删除它  
 > **find . -name \*.log -exec grep -i hello {} ; -print**：在当前目录及子目录下查出文件名后缀为.log的文件并且该文件内容包含了hello字样并打印，-exec 命令表示对查出文件操作，-i表示不区分大小写  
 > **find . -name \*.log | grep hello**：在当前目录及子目录下查出文件名后缀为.log的文件并且文件名包含了hello字样（grep用来处理字符串）
 
 <a id="grep"></a>
 ## grep
 全面搜索正则表达式并把行打印出来，`语法：grep -option regex filename`
-> 默认区分大小写，-i 选项可以忽略大小写
+> 默认区分大小写，-i 选项可以忽略大小写  
 > **grep match_word file_name**：在文件中搜索一个单词，命令会返回一个包含“match_word”的文本行  
 > **grep -v match_word file_name**：在文件中搜索一个单词，命令会返回一个不包含“match_word”的文本行  
 > **grep -c match_word file_name**：统计文件中包含“match_pattern”的文本行的行数  
@@ -172,7 +172,7 @@ locate a.txt 在系统全局范围内查找文件名包含a.txt字样的文件�
 **cat -n 文件名**：显示文件内容，连行号一起显示  
 **cat filename | grep abc -A10**：查看filename中含有abc所在行后10行（A10）  
 **less 文件名**：一页一页的显示文件内容（搜索翻页同man命令）  
-**head -n 文件名**：显示文件头n行内容，n指定显示多少行
+**head -n 文件名**：显示文件头n行内容，n指定显示多少行  
 **tail -nf 文件名**：显示文件尾几行内容,n指定显示多少行,f用于实时追踪文件的所有更新，常用于查阅正在改变的日志文件（如tail -f -n 3 a.log 表示开始显示最后3行，并在文件更新时实时追加显示，没有\-n默认10行）
 
 <a id="文本处理"></a>
